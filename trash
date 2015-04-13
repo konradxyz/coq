@@ -1,0 +1,32 @@
+(*
+Fixpoint eval (va:varAssignment) (e : exp) : val :=
+  match e with
+  | Var v : Nat 
+  | Const : nat -> exp
+  | Add : exp -> exp -> exp
+  | MakePair : exp -> exp -> exp
+  | Fst : exp -> exp
+  | Snd : exp -> exp.
+
+*)
+
+
+(*
+Fixpoint insert T (v:var) (t:T) (m : map T) : map T := 
+  match m with
+  | Nil => Cons T v t (Nil T)
+  | Cons vm tm mm => if eq_nat_dec v vm then Cons T v t mm else Cons T vm tm (insert T v t mm)
+end.
+
+
+Inductive map (T:Type) : Type :=
+  | Nil : map T
+  | Cons : var -> T -> map T -> map T.
+
+Fixpoint  eqVal (v:val) (w:val) : Prop :=
+  match v, w with
+  | Nat vn, Nat wn => if eq_nat_dec vn wn then True else False
+  | Pair vf vs, Pair wf ws => eqVal vf wf /\ eqVal vs ws
+  | _, _ => False
+end.
+*)
